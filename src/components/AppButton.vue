@@ -2,12 +2,9 @@
   <router-link 
     class="btn" 
     :to="to"
-    :class="{
-      'btn-primary': primary,
-      'btn-danger': danger,
-      '': normal,
-      'btn-lg': large
-    }"
+    :class="[
+      themes[theme], sizes[size]
+    ]"
   >
     {{to.name}}
   </router-link>
@@ -15,28 +12,28 @@
 
 <script>
 export default {
+  data: () => ({
+    themes: {
+      primary: 'btn-primary',
+      danger: 'btn-danger',
+    },
+    sizes: {
+      normal: '',
+      large: 'btn-lg'
+    }
+  }),
   props: {
     // Color style props
-    primary: {
+    theme: {
       required: false,
-      type: Boolean,
-      default: true
-    },
-    danger: {
-      required: false,
-      type: Boolean,
-      default: false
+      type: String,
+      default: 'primary'
     },
     // Size props
-    normal: {
+    size: {
       required: false,
-      type: Boolean,
-      default: true
-    },
-    large: {
-      required: false,
-      type: Boolean,
-      default: false
+      type: String,
+      default: 'normal'
     },
     // Navigate to props
     to: {

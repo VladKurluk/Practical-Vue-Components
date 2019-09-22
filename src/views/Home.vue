@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <app-button :to="{ name: 'signin' }" />
-    <app-button :to="{ name: 'signin' }" danger large/>
+    <app-button :to="{ name: 'signin' }" theme="danger" size="large" />
   </div>
 </template>
 
