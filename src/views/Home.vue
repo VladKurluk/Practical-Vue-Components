@@ -2,6 +2,7 @@
   <div class="home">
     <app-button :to="{ name: 'signin' }" />
     <app-button :to="{ name: 'signin' }" theme="danger" size="large" />
+    <app-button @click.prevent="clicked" />
   </div>
 </template>
 
@@ -13,6 +14,11 @@ export default {
   name: 'home',
   components: {
     AppButton
+  },
+  methods: {
+    clicked () {
+      alert('Clickkkk!')
+    }
   }
 }
 </script>
