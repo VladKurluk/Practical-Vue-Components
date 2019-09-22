@@ -1,4 +1,4 @@
-# vue_components
+# Practical Vue Components (Практические компоненты Vue)
 
 ## Версия Node.js - 11.5.0
 
