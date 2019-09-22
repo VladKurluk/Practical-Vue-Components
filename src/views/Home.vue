@@ -2,7 +2,7 @@
   <div class="home">
     <app-button :to="{ name: 'signin' }" />
     <app-button :to="{ name: 'signin' }" theme="danger" size="large" />
-    <app-button @click.prevent="clicked" />
+    <app-button @click.prevent="clicked" disabled />
   </div>
 </template>
 

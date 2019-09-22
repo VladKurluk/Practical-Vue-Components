@@ -2,9 +2,12 @@
   <router-link 
     class="btn"
     @click.native="clicked"
+    :disabled="disabled"
     :to="to"
     :class="[
-      themes[theme], sizes[size]
+      themes[theme], sizes[size], {
+        'disabled': disabled
+      }
     ]"
   >
     {{to.name}}
@@ -35,6 +38,12 @@ export default {
       required: false,
       type: String,
       default: 'normal'
+    },
+    // Disabled stste 
+    disabled: {
+      required: false,
+      type: Boolean,
+      default: false
     },
     // Navigate to props
     to: {
